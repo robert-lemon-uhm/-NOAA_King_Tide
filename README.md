@@ -1,1 +1,7 @@
-# -NOAA_King_Tide
+# NOAA King Tide Data Collection Automation
+
+This project automates the data collection of [king tide](prediction) dates for NOAA, allowing them to easily pick the best dates to gather data. After gathering the data, the king tide predictions for all of the stations within a region are compared to a specified primary station in order to determine the date with the highest king tide for the entire region. This has allowed NOAA to expand their operation outside of the state of Hawaii and throughout the pacific as a whole. More information about their project can be found [here](https://seagrant.soest.hawaii.edu/coastal-and-climate-science-and-resilience/ccs-projects/when/).
+
+I created an [instructional video](https://youtu.be/W9lyhdQ0xk4) for this project, which walks through the process of using this notebook for those with no prior programming experience. 
+
+On top of the data wrangling skills utlized in this project (numpy and pandas), it also required multiple APIs. NOAA's [data api](https://tidesandcurrents.noaa.gov/api-helper/url-generator.html) was utilized to acquire the data, and the [gspread](https://docs.gspread.org/en/latest/) API allowed the data to be written to Google Drive. Google Colab's embedded forms were also utilized to make the program as robust as possible while ensuring people without any coding experience are still able to utilize it. Between the technical challenges of acquiring, cleaning, analyzing, and exporting the data and the project management challenges of detailing, revising, and communicating the project to those who will be using it, this notebook was an excellent experience!
